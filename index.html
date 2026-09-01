@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Naila Rechima | Portfolio</title>
     <!-- Importing a premium editorial serif font (Cinzel for headers) and a clean geometric sans-serif for UI elements -->
-    <link rel="preconnect" href="https://googleapis.com">
-    <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Cinzel:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
     
     <style>
         /* CSS Variables defining the custom premium chic palette */
@@ -321,3 +321,128 @@
 
         .skills-container {
             display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin-top: 30px;
+        }
+
+        .skill-pill {
+            font-family: var(--font-ui);
+            font-size: 0.75rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+            padding: 10px 22px;
+            background-color: var(--card-bg);
+            border-radius: 30px;
+            transition: color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .skill-pill:hover {
+            color: var(--accent-bronze);
+            box-shadow: inset 0 0 0 1px var(--accent-bronze);
+        }
+
+        /* Responsive Breakpoints for Tablet & Mobile Layouts */
+        @media (max-width: 900px) {
+            .editorial-grid {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+            nav {
+                padding: 0 30px;
+            }
+            main {
+                padding: 0 30px;
+                margin-top: 140px;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <span class="nav-logo">Naila Rechima</span>
+        <div class="nav-menu">
+            <a href="#">Capabilities</a>
+            <a href="#">Technical Repositories</a>
+            <div class="search-container">
+                <div class="search-icon"></div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <header>
+            <h1>Naila Rechima<br>Capabilities</h1>
+            <p class="hero-desc">
+                Strategic design and technical documentation frameworks for digital environments.
+                Specializing in editorial systems, component libraries, and operational matrices.
+            </p>
+            <div class="horizontal-action-bar">
+                <a href="#">Explore Works</a>
+                <a href="#">Methodology</a>
+                <a href="#">Contact</a>
+            </div>
+        </header>
+
+        <section>
+            <h2 class="grid-header-title">Technical Repositories</h2>
+            <div class="editorial-grid">
+                <!-- Case Study 01 -->
+                <article class="project-card">
+                    <div>
+                        <div class="card-meta">Case Study 01 // Repository Framework</div>
+                        <h3 class="card-title">Project Placement Alpha</h3>
+                        <p class="card-desc">
+                            This section serves as a clean workspace template ready for your upcoming investigation text. You can completely edit these text boundaries using your web editor layout settings.
+                        </p>
+                        <div class="embedded-qms-doc">
+                            <h4>Documentation Parameter Trace</h4>
+                            <table class="doc-matrix-preview">
+                                <tr><td>Reference Standard:</td><td style="text-align: right;">Pending Allocation</td></tr>
+                                <tr><td>Verification Protocol:</td><td style="text-align: right;">Unassigned</td></tr>
+                            </table>
+                        </div>
+                    </div>
+                    <a href="#" class="pill-button">Open File</a>
+                </article>
+
+                <!-- Case Study 02 -->
+                <article class="project-card">
+                    <div>
+                        <div class="card-meta">Case Study 02 // Repository Framework</div>
+                        <h3 class="card-title">Project Placement Beta</h3>
+                        <p class="card-desc">
+                            This section serves as a clean workspace template ready for your upcoming investigation text. You can completely edit these text boundaries using your web editor layout settings.
+                        </p>
+                        <div class="embedded-qms-doc">
+                            <h4>Documentation Parameter Trace</h4>
+                            <table class="doc-matrix-preview">
+                                <tr><td>Reference Standard:</td><td style="text-align: right;">Pending Allocation</td></tr>
+                                <tr><td>Verification Protocol:</td><td style="text-align: right;">Unassigned</td></tr>
+                            </table>
+                        </div>
+                    </div>
+                    <a href="#" class="pill-button">Open File</a>
+                </article>
+            </div>
+        </section>
+
+        <footer class="skills-footer">
+            <hr style="border: none; border-top: 1px solid var(--card-bg); margin-bottom: 40px;">
+            <h2 class="grid-header-title" style="margin-bottom: 0;">Core Capabilities</h2>
+            <div class="skills-container">
+                <span class="skill-pill">Editorial Systems</span>
+                <span class="skill-pill">Component Libraries</span>
+                <span class="skill-pill">Operational Matrices</span>
+                <span class="skill-pill">Documentation Frameworks</span>
+                <span class="skill-pill">UX Strategy</span>
+                <span class="skill-pill">Technical Writing</span>
+            </div>
+        </footer>
+    </main>
+</body>
+</html>
