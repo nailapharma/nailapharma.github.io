@@ -273,7 +273,7 @@
             margin-bottom: 40px;
         }
 
-        /* NEW: Image container replacing the documentation parameter trace box */
+        /* Image container — holds either a real image or a styled placeholder */
         .card-image {
             width: 100%;
             aspect-ratio: 16 / 9;
@@ -283,6 +283,10 @@
             margin-bottom: 35px;
             background-color: #060606;
             border: 1px solid rgba(197, 168, 128, 0.15);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             transition: border-color 0.4s ease, box-shadow 0.4s ease;
         }
 
@@ -303,6 +307,17 @@
         .project-card:hover .card-image img {
             transform: scale(1.04);
             opacity: 1;
+        }
+
+        /* Placeholder text — for cases awaiting an image upload */
+        .placeholder-text {
+            font-family: var(--font-ui);
+            font-size: 0.7rem;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+            text-align: center;
+            padding: 0 20px;
         }
 
         /* 5. Buttons: Understated, pill-shaped primary action buttons with smooth color transitions */
@@ -455,7 +470,7 @@
                             A collection of self directed technical projects executing Root Cause Analysis (RCA), Standard Operating Procedure (SOP) design, and Regulatory Remediation Frameworks based on FDA, HPRA, and EMA compliance directives.
                         </p>
                         <div class="card-image">
-                            <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&q=80" alt="Independent Quality & Compliance Analysis">
+                            <span class="placeholder-text">Case Study 01 Image</span>
                         </div>
                     </div>
                     <a href="#" class="pill-button">Open File</a>
@@ -554,7 +569,7 @@
                             Designed and monitored sterile bioprocessing workflows using advanced cleanroom technologies and microbiological controls. Optimised fermentation parameters to maintain safe, quality products.
                         </p>
                         <div class="card-image">
-                            <img src="https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?w=800&q=80" alt="Industrial Bioprocessing">
+                            <span class="placeholder-text">Case Study 07 Image</span>
                         </div>
                     </div>
                     <a href="#" class="pill-button">Open File</a>
@@ -568,7 +583,7 @@
                             Utilised Spectroscopy and Chromatography instrumentation to achieve Quality control and to maintain trueness within laboratory testing.
                         </p>
                         <div class="card-image">
-                            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80" alt="Precision Instrumentation">
+                            <span class="placeholder-text">Case Study 08 Image</span>
                         </div>
                     </div>
                     <a href="#" class="pill-button">Open File</a>
