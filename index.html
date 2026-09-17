@@ -273,34 +273,36 @@
             margin-bottom: 40px;
         }
 
-        /* 9. Supporting Functional Document/Matrix Component Structure Layer Inside the Framework */
-        .embedded-qms-doc {
-            background-color: #060606;
-            padding: 25px;
+        /* NEW: Image container replacing the documentation parameter trace box */
+        .card-image {
+            width: 100%;
+            aspect-ratio: 16 / 9;
             border-radius: 6px;
+            overflow: hidden;
             margin-top: auto;
             margin-bottom: 35px;
+            background-color: #060606;
+            border: 1px solid rgba(197, 168, 128, 0.15);
+            transition: border-color 0.4s ease, box-shadow 0.4s ease;
         }
 
-        .embedded-qms-doc h4 {
-            font-family: var(--font-ui);
-            font-size: 0.7rem;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            margin-bottom: 15px;
-            color: var(--text-primary);
-        }
-
-        .doc-matrix-preview {
-            font-family: var(--font-ui);
-            font-size: 0.8rem;
-            color: var(--text-secondary);
-            border-collapse: collapse;
+        .card-image img {
             width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.4s ease;
+            opacity: 0.85;
         }
 
-        .doc-matrix-preview td {
-            padding: 6px 0;
+        .project-card:hover .card-image {
+            border-color: rgba(197, 168, 128, 0.45);
+            box-shadow: 0 0 25px rgba(197, 168, 128, 0.15);
+        }
+
+        .project-card:hover .card-image img {
+            transform: scale(1.04);
+            opacity: 1;
         }
 
         /* 5. Buttons: Understated, pill-shaped primary action buttons with smooth color transitions */
@@ -450,13 +452,10 @@
                         <div class="card-meta">Case Study 01 | Enviroment </div>
                         <h3 class="card-title">Independent Quality & Compliance Analysis</h3>
                         <p class="card-desc">
-A collection of self directed technical projects executing Root Cause Analysis (RCA), Standard Operating Procedure (SOP) design, and Regulatory Remediation Frameworks based on FDA, HPRA, and EMA compliance directives.                        </p>
-                        <div class="embedded-qms-doc">
-                            <h4>Documentation Parameter Trace</h4>
-                            <table class="doc-matrix-preview">
-                                <tr><td>Reference Standard:</td><td style="text-align: right;">Pending Allocation</td></tr>
-                                <tr><td>Verification Protocol:</td><td style="text-align: right;">Unassigned</td></tr>
-                            </table>
+                            A collection of self directed technical projects executing Root Cause Analysis (RCA), Standard Operating Procedure (SOP) design, and Regulatory Remediation Frameworks based on FDA, HPRA, and EMA compliance directives.
+                        </p>
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&q=80" alt="Independent Quality & Compliance Analysis">
                         </div>
                     </div>
                     <a href="#" class="pill-button">Open File</a>
@@ -469,12 +468,8 @@ A collection of self directed technical projects executing Root Cause Analysis (
                         <p class="card-desc">
                             Designed and evaluated comprehensive environmental management strategies for biotechnology, focusing on regulatory compliance and eco-friendly industrial practices. Integrated clean technology principles to advance sustainable bioeconomy.
                         </p>
-                        <div class="embedded-qms-doc">
-                            <h4>Documentation Parameter Trace</h4>
-                            <table class="doc-matrix-preview">
-                                <tr><td>Reference Standard:</td><td style="text-align: right;">Pending Allocation</td></tr>
-                                <tr><td>Verification Protocol:</td><td style="text-align: right;">Unassigned</td></tr>
-                            </table>
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?w=800&q=80" alt="Sustainable Biotech Systems">
                         </div>
                     </div>
                     <a href="#" class="pill-button">Open File</a>
@@ -492,12 +487,8 @@ A collection of self directed technical projects executing Root Cause Analysis (
                         <p class="card-desc">
                             Conducted rigorous chemical analysis and structural synthesis across organic and inorganic chemistry, with a targeted focus on extracting and evaluating natural organic compounds. Applied chemical principles to isolate and characterise complex molecular structures.
                         </p>
-                        <div class="embedded-qms-doc">
-                            <h4>Documentation Parameter Trace</h4>
-                            <table class="doc-matrix-preview">
-                                <tr><td>Reference Standard:</td><td style="text-align: right;">Pending Allocation</td></tr>
-                                <tr><td>Verification Protocol:</td><td style="text-align: right;">Unassigned</td></tr>
-                            </table>
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=800&q=80" alt="Molecular Synthesis">
                         </div>
                     </div>
                     <a href="#" class="pill-button">Open File</a>
@@ -510,12 +501,8 @@ A collection of self directed technical projects executing Root Cause Analysis (
                         <p class="card-desc">
                             Investigated the physical mechanisms that govern biotechnology, encompassing physics with physical chemistry. Applied views of the mechanics of energy, matter, and thermodynamic principles.
                         </p>
-                        <div class="embedded-qms-doc">
-                            <h4>Documentation Parameter Trace</h4>
-                            <table class="doc-matrix-preview">
-                                <tr><td>Reference Standard:</td><td style="text-align: right;">Pending Allocation</td></tr>
-                                <tr><td>Verification Protocol:</td><td style="text-align: right;">Unassigned</td></tr>
-                            </table>
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1507413245164-6160d8298b31?w=800&q=80" alt="Applied Thermodynamics">
                         </div>
                     </div>
                     <a href="#" class="pill-button">Open File</a>
@@ -533,12 +520,8 @@ A collection of self directed technical projects executing Root Cause Analysis (
                         <p class="card-desc">
                             Explored the structural architecture of biomolecules from cellular mechanisms to human physiology. With practical examination of biochemical pathways within the pharmaceutical industry.
                         </p>
-                        <div class="embedded-qms-doc">
-                            <h4>Documentation Parameter Trace</h4>
-                            <table class="doc-matrix-preview">
-                                <tr><td>Reference Standard:</td><td style="text-align: right;">Pending Allocation</td></tr>
-                                <tr><td>Verification Protocol:</td><td style="text-align: right;">Unassigned</td></tr>
-                            </table>
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?w=800&q=80" alt="Biomolecular Systems">
                         </div>
                     </div>
                     <a href="#" class="pill-button">Open File</a>
@@ -551,12 +534,8 @@ A collection of self directed technical projects executing Root Cause Analysis (
                         <p class="card-desc">
                             Analysed structures, alongside adopting critical thinking applications within the biotech industry. Applied problem solving, and strategic data analysis to address complex industry challenges.
                         </p>
-                        <div class="embedded-qms-doc">
-                            <h4>Documentation Parameter Trace</h4>
-                            <table class="doc-matrix-preview">
-                                <tr><td>Reference Standard:</td><td style="text-align: right;">Pending Allocation</td></tr>
-                                <tr><td>Verification Protocol:</td><td style="text-align: right;">Unassigned</td></tr>
-                            </table>
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80" alt="Computational Analysis">
                         </div>
                     </div>
                     <a href="#" class="pill-button">Open File</a>
@@ -574,12 +553,8 @@ A collection of self directed technical projects executing Root Cause Analysis (
                         <p class="card-desc">
                             Designed and monitored sterile bioprocessing workflows using advanced cleanroom technologies and microbiological controls. Optimised fermentation parameters to maintain safe, quality products.
                         </p>
-                        <div class="embedded-qms-doc">
-                            <h4>Documentation Parameter Trace</h4>
-                            <table class="doc-matrix-preview">
-                                <tr><td>Reference Standard:</td><td style="text-align: right;">Pending Allocation</td></tr>
-                                <tr><td>Verification Protocol:</td><td style="text-align: right;">Unassigned</td></tr>
-                            </table>
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?w=800&q=80" alt="Industrial Bioprocessing">
                         </div>
                     </div>
                     <a href="#" class="pill-button">Open File</a>
@@ -592,12 +567,8 @@ A collection of self directed technical projects executing Root Cause Analysis (
                         <p class="card-desc">
                             Utilised Spectroscopy and Chromatography instrumentation to achieve Quality control and to maintain trueness within laboratory testing.
                         </p>
-                        <div class="embedded-qms-doc">
-                            <h4>Documentation Parameter Trace</h4>
-                            <table class="doc-matrix-preview">
-                                <tr><td>Reference Standard:</td><td style="text-align: right;">Pending Allocation</td></tr>
-                                <tr><td>Verification Protocol:</td><td style="text-align: right;">Unassigned</td></tr>
-                            </table>
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80" alt="Precision Instrumentation">
                         </div>
                     </div>
                     <a href="#" class="pill-button">Open File</a>
